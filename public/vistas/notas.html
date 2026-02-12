@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Académico - Notas</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>
+            <i class="fas fa-graduation-cap"></i>
+            Panel de Administración
+        </h1>
+        <span class="header-badge">abc</span>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Menú de navegación</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="estudiantes.html">
+                        <i class="fas fa-user-graduate"></i>
+                        Estudiantes
+                    </a>
+                </li>
+                <li>
+                    <a href="asignaturas.html">
+                        <i class="fas fa-book"></i>
+                        Asignaturas
+                    </a>
+                </li>
+                <li>
+                    <a href="notas.html" class="active">
+                        <i class="fas fa-clipboard-list"></i>
+                        Notas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Gestión de Notas</h2>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <button class="btn-add" onclick="document.getElementById('modalNota').classList.add('show')">
+                    <i class="fas fa-plus-circle"></i>
+                    Registrar Nota
+                </button>
+            </div>
+
+            <!-- Tabla de notas -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Estudiante</th>
+                            <th>Asignatura</th>
+                            <th>Nota</th>
+                            <th>Fecha</th>
+                            <th>Observación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Juan Pérez García</td>
+                            <td>Cálculo Diferencial</td>
+                            <td>4.5</td>
+                            <td>2026-01-15</td>
+                            <td>Excelente desempeño</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>María López Rodríguez</td>
+                            <td>Física Mecánica</td>
+                            <td>3.8</td>
+                            <td>2026-01-18</td>
+                            <td>Buen rendimiento</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Juan Pérez García</td>
+                            <td>Programación Orientada a Objetos</td>
+                            <td>5.0</td>
+                            <td>2026-01-20</td>
+                            <td>Destacado en todos los aspectos</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ana Gómez Herrera</td>
+                            <td>Bases de Datos</td>
+                            <td>4.2</td>
+                            <td>2026-01-22</td>
+                            <td>Muy buen trabajo</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Luis Ramírez Torres</td>
+                            <td>Inglés Avanzado</td>
+                            <td>3.5</td>
+                            <td>2026-01-25</td>
+                            <td>Requiere más práctica oral</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>María López Rodríguez</td>
+                            <td>Cálculo Diferencial</td>
+                            <td>4.0</td>
+                            <td>2026-01-28</td>
+                            <td>Buen avance</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ana Gómez Herrera</td>
+                            <td>Física Mecánica</td>
+                            <td>4.7</td>
+                            <td>2026-02-01</td>
+                            <td>Excelente comprensión</td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalNota').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para agregar/editar nota -->
+    <div id="modalNota" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Registrar Nota</h3>
+                <button class="close" onclick="document.getElementById('modalNota').classList.remove('show')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="estudiante">Estudiante *</label>
+                        <select id="estudiante" name="estudiante" required>
+                            <option value="">Seleccione un estudiante</option>
+                            <option value="1">Juan Pérez García</option>
+                            <option value="2">María López Rodríguez</option>
+                            <option value="3">Carlos Martínez Silva</option>
+                            <option value="4">Ana Gómez Herrera</option>
+                            <option value="5">Luis Ramírez Torres</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="asignatura">Asignatura *</label>
+                        <select id="asignatura" name="asignatura" required>
+                            <option value="">Seleccione una asignatura</option>
+                            <option value="1">Cálculo Diferencial</option>
+                            <option value="2">Física Mecánica</option>
+                            <option value="3">Programación Orientada a Objetos</option>
+                            <option value="4">Química General</option>
+                            <option value="5">Inglés Avanzado</option>
+                            <option value="6">Bases de Datos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nota">Nota *</label>
+                        <input type="number" id="nota" name="nota" min="0" max="5" step="0.1" placeholder="0.0 - 5.0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha *</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacion">Observación</label>
+                        <textarea id="observacion" name="observacion" rows="3" placeholder="Ingrese observaciones sobre el desempeño del estudiante"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="document.getElementById('modalNota').classList.remove('show')">Cancelar</button>
+                <button class="btn-save">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Derechos reservados © 2026 - Panel admin - del G1 de Programación con Java & Javascript</p>
+    </footer>
+</body>
+</html>

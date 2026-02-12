@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Académico - Asignaturas</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>
+            <i class="fas fa-graduation-cap"></i>
+            Panel de Administración
+        </h1>
+        <span class="header-badge">abc</span>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Menú de navegación</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="estudiantes.html">
+                        <i class="fas fa-user-graduate"></i>
+                        Estudiantes
+                    </a>
+                </li>
+                <li>
+                    <a href="asignaturas.html" class="active">
+                        <i class="fas fa-book"></i>
+                        Asignaturas
+                    </a>
+                </li>
+                <li>
+                    <a href="notas.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        Notas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Gestión de Asignaturas</h2>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <button class="btn-add" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                    <i class="fas fa-plus-circle"></i>
+                    Agregar Asignatura
+                </button>
+            </div>
+
+            <!-- Tabla de asignaturas -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Créditos</th>
+                            <th>Docente</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>MAT-101</td>
+                            <td>Cálculo Diferencial</td>
+                            <td>4</td>
+                            <td>Dr. Roberto Sánchez</td>
+                            <td><span class="badge badge-active">Activo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>FIS-201</td>
+                            <td>Física Mecánica</td>
+                            <td>3</td>
+                            <td>Dra. Patricia Mendoza</td>
+                            <td><span class="badge badge-active">Activo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>PRG-301</td>
+                            <td>Programación Orientada a Objetos</td>
+                            <td>4</td>
+                            <td>Ing. Carlos Vargas</td>
+                            <td><span class="badge badge-active">Activo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>QUI-102</td>
+                            <td>Química General</td>
+                            <td>3</td>
+                            <td>Dra. Ana Torres</td>
+                            <td><span class="badge badge-inactive">Inactivo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>ING-401</td>
+                            <td>Inglés Avanzado</td>
+                            <td>2</td>
+                            <td>Prof. Michael Johnson</td>
+                            <td><span class="badge badge-active">Activo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>BDD-501</td>
+                            <td>Bases de Datos</td>
+                            <td>4</td>
+                            <td>Ing. Laura Fernández</td>
+                            <td><span class="badge badge-active">Activo</span></td>
+                            <td>
+                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                                    <i class="fas fa-edit"></i> Editar
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para agregar/editar asignatura -->
+    <div id="modalAsignatura" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar Asignatura</h3>
+                <button class="close" onclick="document.getElementById('modalAsignatura').classList.remove('show')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="codigo">Código de Asignatura *</label>
+                        <input type="text" id="codigo" name="codigo" placeholder="Ej: MAT-101" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Asignatura *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="creditos">Créditos *</label>
+                        <input type="number" id="creditos" name="creditos" min="1" max="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="docente">Docente Asignado *</label>
+                        <input type="text" id="docente" name="docente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado *</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Seleccione un estado</option>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="document.getElementById('modalAsignatura').classList.remove('show')">Cancelar</button>
+                <button class="btn-save">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Derechos reservados © 2026 - Panel admin - del G1 de Programación con Java & Javascript</p>
+    </footer>
+</body>
+</html>

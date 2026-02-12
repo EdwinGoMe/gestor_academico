@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Académico - Inicio</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>
+            <i class="fas fa-graduation-cap"></i>
+            Panel de Administración
+        </h1>
+        <span class="header-badge">abc</span>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Menú de navegación</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html" class="active">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="vistas/estudiantes.html">
+                        <i class="fas fa-user-graduate"></i>
+                        Estudiantes
+                    </a>
+                </li>
+                <li>
+                    <a href="vistas/asignaturas.html">
+                        <i class="fas fa-book"></i>
+                        Asignaturas
+                    </a>
+                </li>
+                <li>
+                    <a href="vistas/notas.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        Notas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Sección de bienvenida -->
+            <div class="welcome-section">
+                <h3>Bienvenido al Gestor Académico</h3>
+                <p>
+                    El <strong>Gestor Académico</strong> es una aplicación web diseñada para administrar de manera 
+                    eficiente la información relacionada con estudiantes, asignaturas y notas en una institución educativa.
+                </p>
+                <p>
+                    Este sistema permite gestionar tres entidades principales:
+                </p>
+                <ul style="color: #7f8c8d; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Estudiantes:</strong> Información personal, documentos de identidad, programas académicos y estado de matrícula.</li>
+                    <li><strong>Asignaturas:</strong> Código, nombre, créditos, docente asignado y estado de la asignatura.</li>
+                    <li><strong>Notas:</strong> Registro de calificaciones de los estudiantes en las diferentes asignaturas, con fechas y observaciones.</li>
+                </ul>
+                <p>
+                    <strong>Desarrollo - Fase 1:</strong> En esta primera fase se ha desarrollado la estructura visual 
+                    y organizacional del proyecto. Se han creado las vistas HTML con sus respectivas tablas y modales, 
+                    aplicando estilos coherentes que permiten una navegación clara entre los módulos.
+                </p>
+                <p>
+                    <strong>Próxima Fase:</strong> En la siguiente etapa se implementará la lógica con JavaScript para 
+                    manipular los datos, permitiendo agregar, editar y eliminar registros de manera dinámica.
+                </p>
+            </div>
+
+            <!-- Tarjetas de acceso a módulos -->
+            <div class="modules-grid">
+                <a href="vistas/estudiantes.html" class="module-card estudiantes">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Estudiantes</h4>
+                    <p>Gestión de estudiantes, documentos y programas académicos</p>
+                </a>
+
+                <a href="vistas/asignaturas.html" class="module-card asignaturas">
+                    <i class="fas fa-book"></i>
+                    <h4>Asignaturas</h4>
+                    <p>Administración de asignaturas, créditos y docentes</p>
+                </a>
+
+                <a href="vistas/notas.html" class="module-card notas">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Notas</h4>
+                    <p>Registro y seguimiento de calificaciones académicas</p>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Derechos reservados © 2026 - Panel admin - del G1 de Programación con Java & Javascript</p>
+    </footer>
+</body>
+</html>
