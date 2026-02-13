@@ -86,20 +86,13 @@ gestor-academico/
 ### Gestión de Notas
 ![Notas](public/assets/img/capturas/notas.png)
 
-## Características del Diseño
+### Vista modal
+![Modal](public/assets/img/capturas/modal.png)
 
-- ✅ Header con branding del proyecto
-- ✅ Sidebar con navegación y iconos
-- ✅ Diseño responsivo para diferentes tamaños de pantalla
-- ✅ Tablas organizadas con información clara
-- ✅ Modales para formularios de agregar/editar
-- ✅ Badges de estado para visualización rápida
-- ✅ Botones de acción con iconos
-- ✅ Footer con información del curso
 
 ## Autor
 
-Proyecto desarrollado como parte del curso de Programación con Java & Javascript - G1
+Edwin Gomez 
 
 ## Año
 
