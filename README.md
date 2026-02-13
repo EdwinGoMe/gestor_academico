@@ -53,7 +53,7 @@ gestor-academico/
 
 1. **Clonar o descargar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/gestor-academico.git
+   git clone https://github.com/EdwinGoMe/gestor_academico.git
    cd gestor-academico
    ```
 
@@ -61,7 +61,7 @@ gestor-academico/
    - Navegar hasta la carpeta `public`
    - Abrir el archivo `index.html` en el navegador
    - También puedes usar un servidor local como Live Server 
-   
+
 3. **Navegación**
    - Utiliza el menú lateral (sidebar) para navegar entre las diferentes secciones
    - Haz clic en los botones "Agregar" para ver los modales de formularios
