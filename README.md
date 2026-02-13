@@ -11,7 +11,7 @@ Este sistema permite gestionar tres entidades principales:
 
 ## Desarrollo por Fases
 
-### Fase 1 (Actual)
+### Fase 1 
 En esta primera fase se ha desarrollado la estructura visual y organizacional del proyecto. Se han creado las vistas HTML con sus respectivas tablas y modales, aplicando estilos coherentes que permiten una navegación clara entre los módulos.
 
 **Características implementadas:**
@@ -22,7 +22,7 @@ En esta primera fase se ha desarrollado la estructura visual y organizacional de
 - Modales para agregar y editar registros
 - Diseño visual coherente y profesional
 
-### Fase 2 (Próxima)
+### Fase 2 
 En la siguiente etapa se implementará la lógica con JavaScript para manipular los datos, permitiendo agregar, editar y eliminar registros de manera dinámica.
 
 ## Estructura de Carpetas
@@ -41,7 +41,8 @@ gestor-academico/
 │               ├── index.png
 │               ├── estudiantes.png
 │               ├── asignaturas.png
-│               └── notas.png
+│               ├──── notas.png
+                └── Vista modal.png
 ├── src/
 │   └── css/
 │       └── style.css
@@ -57,10 +58,10 @@ gestor-academico/
    ```
 
 2. **Abrir el proyecto**
-   - Navega hasta la carpeta `public`
-   - Abre el archivo `index.html` en tu navegador web preferido
-   - También puedes usar un servidor local como Live Server (extensión de VS Code)
-
+   - Navegar hasta la carpeta `public`
+   - Abrir el archivo `index.html` en el navegador
+   - También puedes usar un servidor local como Live Server 
+   
 3. **Navegación**
    - Utiliza el menú lateral (sidebar) para navegar entre las diferentes secciones
    - Haz clic en los botones "Agregar" para ver los modales de formularios
