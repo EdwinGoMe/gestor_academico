@@ -14,16 +14,13 @@ Este sistema permite gestionar tres entidades principales:
 ### Fase 1 
 En esta primera fase se ha desarrollado la estructura visual y organizacional del proyecto. Se han creado las vistas HTML con sus respectivas tablas y modales, aplicando estilos coherentes que permiten una navegación clara entre los módulos.
 
-**Características implementadas:**
-- Estructura completa del proyecto en HTML y CSS
-- Diseño responsivo con sidebar de navegación
-- Cuatro vistas principales: Inicio, Estudiantes, Asignaturas y Notas
-- Tablas estructuradas para visualización de datos
-- Modales para agregar y editar registros
-- Diseño visual coherente y profesional
-
 ### Fase 2 
-En la siguiente etapa se implementará la lógica con JavaScript para manipular los datos, permitiendo agregar, editar y eliminar registros de manera dinámica.
+Se incorporó JavaScript para convertir la maqueta visual en un sistema funcional en el navegador. Se implementaron las siguientes características:
+- **CRUD en Memoria**: Permite agregar, editar y eliminar registros dinámicamente en los módulos de Estudiantes, Asignaturas y Notas.
+- **Interacción por Modales**: Todas las operaciones de creación y edición se realizan exclusivamente a través de ventanas modales.
+- **Overlay de Carga**: Se incluyó un sistema de "Loading..." simulado con mensajes personalizados para cada acción, mejorando la experiencia de usuario.
+- **Delegación de Eventos**: Se optimizó el rendimiento mediante el uso de delegación de eventos en las tablas.
+- **Refuerzo de Flujo de Guardado**: Uso de un único evento `submit` para gestionar tanto la creación como la actualización de datos.
 
 ## Estructura de Carpetas
 
@@ -41,11 +38,15 @@ gestor-academico/
 │               ├── index.png
 │               ├── estudiantes.png
 │               ├── asignaturas.png
-│               ├──── notas.png
-                └── Vista modal.png
+│               ├── notas.png
+│               └── modal.png
 ├── src/
-│   └── css/
-│       └── style.css
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── estudiantes.js
+│       ├── asignaturas.js
+│       └── notas.js
 └── README.md
 ```
 
@@ -62,34 +63,34 @@ gestor-academico/
    - Abrir el archivo `index.html` en el navegador
    - También puedes usar un servidor local como Live Server 
 
-3. **Navegación**
-   - Utiliza el menú lateral (sidebar) para navegar entre las diferentes secciones
-   - Haz clic en los botones "Agregar" para ver los modales de formularios
-   - Los botones de "Editar" y "Eliminar" aún no tienen funcionalidad (Fase 2)
+3. **Funcionalidad**
+   - Los datos iniciales se cargan automáticamente al entrar a cada módulo.
+   - Las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) son funcionales y se guardan en memoria (volátiles al recargar la página).
 
 ## Tecnologías Utilizadas
 
-- **HTML5**: Estructura semántica de las páginas
-- **CSS3**: Estilos personalizados y diseño responsivo
-- **Font Awesome 6.4.0**: Iconos para mejorar la interfaz de usuario
+- **HTML5**: Estructura semántica de las páginas.
+- **CSS3**: Estilos personalizados, diseño responsivo y animaciones de carga.
+- **JavaScript (ES6+)**: Lógica funcional, manipulación del DOM y gestión de datos.
+- **Font Awesome 6.4.0**: Iconos para mejorar la interfaz de usuario.
 
-## Capturas de Pantalla
+## Capturas de Pantalla (Actualizadas Fase 2)
+*(Las capturas muestran el sistema con datos dinámicos y el overlay de carga)*
 
 ### Página Principal
 ![Página de Inicio](public/assets/img/capturas/index.png)
 
-### Gestión de Estudiantes
+### Gestión de Estudiantes (Datos Dinámicos)
 ![Estudiantes](public/assets/img/capturas/estudiantes.png)
 
-### Gestión de Asignaturas
+### Gestión de Asignaturas (Datos Dinámicos)
 ![Asignaturas](public/assets/img/capturas/asignaturas.png)
 
-### Gestión de Notas
+### Gestión de Notas (Datos Dinámicos)
 ![Notas](public/assets/img/capturas/notas.png)
 
-### Vista modal
-![Modal](public/assets/img/capturas/modal.png)
-
+### Overlay de Carga en Acción
+![Cargando](public/assets/img/capturas/loading.png)
 
 ## Autor
 
