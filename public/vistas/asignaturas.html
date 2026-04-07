@@ -59,7 +59,7 @@
             </div>
 
             <div style="margin-bottom: 20px;">
-                <button class="btn-add" onclick="document.getElementById('modalAsignatura').classList.add('show')">
+                <button id="btn-add-asignatura" class="btn-add">
                     <i class="fas fa-plus-circle"></i>
                     Agregar Asignatura
                 </button>
@@ -79,103 +79,8 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>MAT-101</td>
-                            <td>Cálculo Diferencial</td>
-                            <td>4</td>
-                            <td>Dr. Roberto Sánchez</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>FIS-201</td>
-                            <td>Física Mecánica</td>
-                            <td>3</td>
-                            <td>Dra. Patricia Mendoza</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>PRG-301</td>
-                            <td>Programación Orientada a Objetos</td>
-                            <td>4</td>
-                            <td>Ing. Carlos Vargas</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>QUI-102</td>
-                            <td>Química General</td>
-                            <td>3</td>
-                            <td>Dra. Ana Torres</td>
-                            <td><span class="badge badge-inactive">Inactivo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>ING-401</td>
-                            <td>Inglés Avanzado</td>
-                            <td>2</td>
-                            <td>Prof. Michael Johnson</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>BDD-501</td>
-                            <td>Bases de Datos</td>
-                            <td>4</td>
-                            <td>Ing. Laura Fernández</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalAsignatura').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
+                    <tbody id="asignaturasBody">
+                        <!-- Las filas se cargarán dinámicamente desde JS -->
                     </tbody>
                 </table>
             </div>
@@ -183,33 +88,33 @@
     </div>
 
     <!-- Modal para agregar/editar asignatura -->
-    <div id="modalAsignatura" class="modal">
+    <div id="asignaturaModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Agregar Asignatura</h3>
-                <button class="close" onclick="document.getElementById('modalAsignatura').classList.remove('show')">&times;</button>
+                <h3 id="asignaturaModalLabel">Agregar Asignatura</h3>
+                <button class="close">&times;</button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="asignatura-form">
                     <div class="form-group">
-                        <label for="codigo">Código de Asignatura *</label>
-                        <input type="text" id="codigo" name="codigo" placeholder="Ej: MAT-101" required>
+                        <label for="asi-codigo">Código de Asignatura *</label>
+                        <input type="text" id="asi-codigo" name="codigo" placeholder="Ej: MAT-101" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">Nombre de la Asignatura *</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="asi-nombre">Nombre de la Asignatura *</label>
+                        <input type="text" id="asi-nombre" name="nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="creditos">Créditos *</label>
-                        <input type="number" id="creditos" name="creditos" min="1" max="6" required>
+                        <label for="asi-creditos">Créditos *</label>
+                        <input type="number" id="asi-creditos" name="creditos" min="1" max="6" required>
                     </div>
                     <div class="form-group">
-                        <label for="docente">Docente Asignado *</label>
-                        <input type="text" id="docente" name="docente" required>
+                        <label for="asi-docente">Docente Asignado *</label>
+                        <input type="text" id="asi-docente" name="docente" required>
                     </div>
                     <div class="form-group">
-                        <label for="estado">Estado *</label>
-                        <select id="estado" name="estado" required>
+                        <label for="asi-estado">Estado *</label>
+                        <select id="asi-estado" name="estado" required>
                             <option value="">Seleccione un estado</option>
                             <option value="activo">Activo</option>
                             <option value="inactivo">Inactivo</option>
@@ -218,9 +123,17 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn-cancel" onclick="document.getElementById('modalAsignatura').classList.remove('show')">Cancelar</button>
-                <button class="btn-save">Guardar</button>
+                <button class="btn-cancel">Cancelar</button>
+                <button type="submit" form="asignatura-form" class="btn-save">Guardar</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Overlay de carga -->
+    <div id="loadingOverlay">
+        <div class="loading-box">
+            <div class="loading-spinner"></div>
+            <p id="loadingMessage">Cargando...</p>
         </div>
     </div>
 
@@ -228,5 +141,7 @@
     <footer>
         <p>Derechos reservados © 2026 - Panel admin - del G1 de Programación con Java & Javascript</p>
     </footer>
+
+    <script src="../../src/js/asignaturas.js"></script>
 </body>
 </html>

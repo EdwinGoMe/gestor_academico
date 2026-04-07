@@ -59,7 +59,7 @@
             </div>
 
             <div style="margin-bottom: 20px;">
-                <button class="btn-add" onclick="document.getElementById('modalEstudiante').classList.add('show')">
+                <button id="btn-add-estudiante" class="btn-add">
                     <i class="fas fa-plus-circle"></i>
                     Agregar Estudiante
                 </button>
@@ -79,87 +79,8 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Juan Pérez García</td>
-                            <td>1234567890</td>
-                            <td>juan.perez@email.com</td>
-                            <td>Ingeniería de Sistemas</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalEstudiante').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>María López Rodríguez</td>
-                            <td>9876543210</td>
-                            <td>maria.lopez@email.com</td>
-                            <td>Administración de Empresas</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalEstudiante').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Carlos Martínez Silva</td>
-                            <td>5551234567</td>
-                            <td>carlos.martinez@email.com</td>
-                            <td>Derecho</td>
-                            <td><span class="badge badge-inactive">Inactivo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalEstudiante').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Ana Gómez Herrera</td>
-                            <td>7778889990</td>
-                            <td>ana.gomez@email.com</td>
-                            <td>Medicina</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalEstudiante').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Luis Ramírez Torres</td>
-                            <td>4445556660</td>
-                            <td>luis.ramirez@email.com</td>
-                            <td>Arquitectura</td>
-                            <td><span class="badge badge-active">Activo</span></td>
-                            <td>
-                                <button class="btn-edit" onclick="document.getElementById('modalEstudiante').classList.add('show')">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                        </tr>
+                    <tbody id="estudiantesBody">
+                        <!-- Las filas se cargarán dinámicamente desde JS -->
                     </tbody>
                 </table>
             </div>
@@ -167,33 +88,33 @@
     </div>
 
     <!-- Modal para agregar/editar estudiante -->
-    <div id="modalEstudiante" class="modal">
+    <div id="estudianteModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Agregar Estudiante</h3>
-                <button class="close" onclick="document.getElementById('modalEstudiante').classList.remove('show')">&times;</button>
+                <h3 id="estudianteModalLabel">Agregar Estudiante</h3>
+                <button class="close">&times;</button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="estudiante-form">
                     <div class="form-group">
-                        <label for="nombre">Nombre Completo *</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="est-nombre">Nombre Completo *</label>
+                        <input type="text" id="est-nombre" name="nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="documento">Documento de Identidad *</label>
-                        <input type="text" id="documento" name="documento" required>
+                        <label for="est-doc">Documento de Identidad *</label>
+                        <input type="text" id="est-doc" name="documento" required>
                     </div>
                     <div class="form-group">
-                        <label for="correo">Correo Electrónico *</label>
-                        <input type="email" id="correo" name="correo" required>
+                        <label for="est-correo">Correo Electrónico *</label>
+                        <input type="email" id="est-correo" name="correo" required>
                     </div>
                     <div class="form-group">
-                        <label for="programa">Programa Académico *</label>
-                        <input type="text" id="programa" name="programa" required>
+                        <label for="est-programa">Programa Académico *</label>
+                        <input type="text" id="est-programa" name="programa" required>
                     </div>
                     <div class="form-group">
-                        <label for="estado">Estado *</label>
-                        <select id="estado" name="estado" required>
+                        <label for="est-estado">Estado *</label>
+                        <select id="est-estado" name="estado" required>
                             <option value="">Seleccione un estado</option>
                             <option value="activo">Activo</option>
                             <option value="inactivo">Inactivo</option>
@@ -202,9 +123,17 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn-cancel" onclick="document.getElementById('modalEstudiante').classList.remove('show')">Cancelar</button>
-                <button class="btn-save">Guardar</button>
+                <button class="btn-cancel">Cancelar</button>
+                <button type="submit" form="estudiante-form" class="btn-save">Guardar</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Overlay de carga -->
+    <div id="loadingOverlay">
+        <div class="loading-box">
+            <div class="loading-spinner"></div>
+            <p id="loadingMessage">Cargando...</p>
         </div>
     </div>
 
@@ -212,5 +141,7 @@
     <footer>
         <p>Derechos reservados © 2026 - Panel admin - del G1 de Programación con Java & Javascript</p>
     </footer>
+
+    <script src="../../src/js/estudiantes.js"></script>
 </body>
 </html>
